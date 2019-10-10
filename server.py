@@ -3,8 +3,8 @@ import socket
 sock = socket.socket(socket.AF_INET,socket.SOCK_STREAM)
 
 host = socket.gethostbyname("socket22.herokuapp.com")
-
-sock.bind((host,80))
+port = int(environ.get('PORT'))
+sock.bind((host,port))
 
 sock.listen(1)
 
