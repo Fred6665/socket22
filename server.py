@@ -1,15 +1,15 @@
 import socket
+while True:
+  sock = socket.socket(socket.AF_INET,socket.SOCK_STREAM)
 
-sock = socket.socket(socket.AF_INET,socket.SOCK_STREAM)
+  host = socket.gethostbyname("socket22.herokuapp.com")
 
-host = socket.gethostbyname("socket22.herokuapp.com")
+  sock.bind((host,80))
 
-sock.bind((host,80))
+  sock.listen(1)
 
-sock.listen(1)
+  conn, addr = sock.accept()
 
-conn, addr = sock.accept()
+  conn.send("lol".encode())
 
-conn.send("lol".encode())
-
-conn.close()
+  conn.close()
