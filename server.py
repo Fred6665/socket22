@@ -2,7 +2,9 @@ import socket
 
 sock = socket.socket(socket.AF_INET,socket.SOCK_STREAM)
 
-sock.bind(("",9090))
+host = socket.gethostbyname("socket22.herokuapp.com")
+
+sock.bind((host,9090))
 
 sock.listen(1)
 
