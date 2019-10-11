@@ -5,7 +5,7 @@ from xmlrpc.server import SimpleXMLRPCServer
 
 
 host = socket.gethostbyname("socket22.herokuapp.com")
-port = os.environ.get('PORT')
+port = int(os.environ.get('PORT'))
 
 
 
