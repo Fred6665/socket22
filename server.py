@@ -1,19 +1,19 @@
-import socket
-import os
 
-sock = socket.socket(socket.AF_INET,socket.SOCK_STREAM)
+import os
+from xmlrpc.server import SimpleXMLRPCServer
+
 
 host = socket.gethostbyname("socket22.herokuapp.com")
 port = int(os.environ.get('PORT'))
 sock.bind((host,port))
 
-sock.listen(1)
 
-while True:
 
-    conn, addr = sock.accept()
 
-    conn.send("lol".encode())
+def is_even(n):
+    return n % 2 == 0
 
-    conn.close()
-
+server = SimpleXMLRPCServer((host, port))
+print("Listening on port 8000...")
+server.register_function(is_even, "is_even")
+server.serve_forever()
