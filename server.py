@@ -15,7 +15,7 @@ def is_even(n):
     return n % 2 == 0
 
 def print_lol():
-    return "lol"
+    return os.environ.get("DATABASE_URL")
 
 server = SimpleXMLRPCServer((host, port))
 print("Listening on port 8000...")
