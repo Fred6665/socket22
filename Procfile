@@ -1,1 +1,1 @@
-web: python3 socketHTTP.py
+web: gunicorn runp-heroku:app
