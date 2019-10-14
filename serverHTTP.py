@@ -23,7 +23,7 @@ from app import app
 
 from flask import Flask
 import os
-app = Flask(__name__)
+app2 = Flask(__name__)
 
 @app.route('/')
 def hello_world():
@@ -32,4 +32,4 @@ def hello_world():
 if __name__ == '__main__':
     PORT = int(os.environ.get('PORT'))
 
-    app.run(host = "0.0.0.0",port = PORT)
+    app2.run(host = "0.0.0.0",port = PORT)
