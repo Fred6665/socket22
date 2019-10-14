@@ -2,9 +2,9 @@ from flask import Flask
 import os
 app = Flask(__name__)
 
-@app.route('/<rrr>')
+@app.route('/<int:rrr>')
 def hello_world(rrr):
-    return str(rrr)
+    return str(rrr+100)
 
 if __name__ == '__main__':
     PORT = int(os.environ.get('PORT'))
