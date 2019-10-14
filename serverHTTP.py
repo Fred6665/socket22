@@ -24,11 +24,11 @@ import os
 
 
 class MyClass(http.server.BaseHTTPRequestHandler):
-    def on_GET():
+    def on_GET(self):
         self.send_response(200)
         self.send_header("Contrent-type","text/html")
         self.end_headers()
-        self.wfile.write(cgi_directories)
+        self.wfile.write("lol".encode())
     pass
 
 
