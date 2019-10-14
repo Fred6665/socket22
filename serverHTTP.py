@@ -1,6 +1,3 @@
-#!flask/bin/python
-from app import app
-
 from flask import Flask
 import os
 app2 = Flask(__name__)
