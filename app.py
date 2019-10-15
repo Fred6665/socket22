@@ -8,7 +8,7 @@ def hello_world(rrr):
 
 @app.route('/events', methods=['POST'])
 def events():
-    return request.form.get["home"]
+    return request.form["home"]
 
 if __name__ == '__main__':
     PORT = int(os.environ.get('PORT'))
