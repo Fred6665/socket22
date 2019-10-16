@@ -2,9 +2,9 @@ from flask import Flask, request
 import os
 app = Flask(__name__)
 
-@app.route('/sing_up',methods=['GET'])
+@app.route('/sing_up',methods=['GET','POST'])
 def hello_world():
-    DB = os.environ.get('DATABASE_URL')
+    #DB = os.environ.get('DATABASE_URL')
     return str({"tery":"lol","fr":[22,10,22]})
 
 @app.route('/events', methods=['POST'])
