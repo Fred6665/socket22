@@ -4,7 +4,8 @@ app = Flask(__name__)
 
 @app.route('/<int:rrr>')
 def hello_world(rrr):
-    return str(rrr+100)
+    PORT = int(os.environ.get('PORT'))
+    return str(PORT)
 
 @app.route('/events', methods=['POST'])
 def events():
