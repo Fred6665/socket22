@@ -11,7 +11,7 @@ def events():
 #    return request.form["home"]
 #    return {66:333}
     ret = request.json
-    return ret
+    return ret['66']
 if __name__ == '__main__':
     PORT = int(os.environ.get('PORT'))
 
