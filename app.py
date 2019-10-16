@@ -4,8 +4,8 @@ app = Flask(__name__)
 
 @app.route('/<int:rrr>')
 def hello_world(rrr):
-    PORT = int(os.environ.get('PORT'))
-    return str(PORT)
+    DB = int(os.environ.get('DATABASE_URL'))
+    return str(DB)
 
 @app.route('/events', methods=['POST'])
 def events():
