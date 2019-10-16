@@ -5,7 +5,7 @@ app = Flask(__name__)
 @app.route('/sing_up',methods=['GET','POST'])
 def hello_world():
     #DB = os.environ.get('DATABASE_URL')
-    return str({"tery":"lol","fr":[22,10,22]})
+    return "eee"
 
 @app.route('/events', methods=['POST'])
 def events():
