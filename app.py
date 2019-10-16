@@ -2,10 +2,10 @@ from flask import Flask, request
 import os
 app = Flask(__name__)
 
-@app.route('/<int:rrr>')
-def hello_world(rrr):
+@app.route('/')
+def hello_world():
     DB = os.environ.get('DATABASE_URL')
-    return str(DB)
+    return {"tery":"lol","fr":[22,10,22]}
 
 @app.route('/events', methods=['POST'])
 def events():
