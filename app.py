@@ -2,7 +2,7 @@ from flask import Flask, request
 import os
 app = Flask(__name__)
 
-@app.route('/')
+@app.route('/sing_up',methods=['GET'])
 def hello_world():
     DB = os.environ.get('DATABASE_URL')
     return {"tery":"lol","fr":[22,10,22]}
