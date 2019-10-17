@@ -4,12 +4,12 @@ app = Flask(__name__)
 
 @app.errorhandler(400)
 def error_req(error):
-    return request.get_data()
+    return str("you giv error 400")
 
 @app.route('/sing_up',methods=['GET','POST'])
 def hello_world():
     #DB = os.environ.get('DATABASE_URL')
-    return str(request.get_data())
+    return str(request.get_data())+str(request.get())+"%%%%"+str(request.headers())
 
 @app.route('/events', methods=['POST'])
 def events():
