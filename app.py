@@ -4,7 +4,7 @@ app = Flask(__name__)
 
 @app.errorhandler(400)
 def error_req(error):
-    return request.get_json()
+    return request.get_data()
 
 @app.route('/sing_up',methods=['GET','POST'])
 def hello_world():
