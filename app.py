@@ -2,6 +2,10 @@ from flask import Flask, request
 import os
 app = Flask(__name__)
 
+@app.errorhandler(400)
+def error_req(error):
+    return request.get()
+
 @app.route('/sing_up',methods=['GET','POST'])
 def hello_world():
     #DB = os.environ.get('DATABASE_URL')
