@@ -9,7 +9,7 @@ def error_req(error):
 @app.route('/sing_up',methods=['GET','POST'])
 def hello_world():
     #DB = os.environ.get('DATABASE_URL')
-    return str(request.get_data())+str(request.get())+"%%%%"+str(request.headers())
+    return "It`s GOOD!!!"
 
 @app.route('/events', methods=['POST'])
 def events():
